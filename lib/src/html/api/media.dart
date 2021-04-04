@@ -366,6 +366,8 @@ abstract class MediaStreamTrack extends EventTarget {
   bool get muted;
 
   String get readyState;
+
+  void stop();
 }
 
 abstract class MediaStreamTrackEvent extends Event {
