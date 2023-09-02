@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/// Cross-platform _dart:html_.
+/// Cross-platform "dart:html" library.
 ///
 /// You can choose from the following libraries:
 ///   * `package:universal_html/html.dart`
@@ -33,11 +33,7 @@
 /// For information on writing web apps with Dart, see https://webdev.dartlang.org.
 library universal_html;
 
-export 'dart:html'
-    if (dart.library.html) 'dart:html' // Browser
+export 'src/_sdk/html.dart'
+    if (dart.library.html) 'src/_sdk/html.dart' // Browser
     if (dart.library.io) 'src/html.dart' // VM
     if (dart.library.js) 'src/html.dart'; // Node.JS
-export 'dart:html'
-    if (dart.library.html) 'dart:html' // Browser
-    if (dart.library.io) 'src/html_top_level_functions.dart' // VM
-    if (dart.library.js) 'src/html_top_level_functions.dart'; // Node.JS

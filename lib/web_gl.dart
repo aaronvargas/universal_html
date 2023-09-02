@@ -12,9 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// Cross-platform "dart:web_gl" library.
 library universal_html.web_gl;
 
-export 'dart:web_gl'
-    if (dart.library.web_gl) 'dart:web_gl' // Browser
+export 'src/_sdk/web_gl.dart'
+    if (dart.library.web_gl) 'src/_sdk/web_gl.dart' // Browser
     if (dart.library.io) 'src/web_gl.dart' // VM
     if (dart.library.js) 'src/web_gl.dart'; // Node.JS

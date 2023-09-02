@@ -12,9 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// Cross-platform "dart:web_audio" library.
 library universal_html.web_audio;
 
-export 'dart:web_audio'
-    if (dart.library.web_audio) 'dart:web_audio' // Browser
+export 'src/_sdk/web_audio.dart'
+    if (dart.library.web_audio) 'src/_sdk/web_audio.dart' // Browser
     if (dart.library.io) 'src/web_audio.dart' // VM
     if (dart.library.js) 'src/web_audio.dart'; // Node.JS
